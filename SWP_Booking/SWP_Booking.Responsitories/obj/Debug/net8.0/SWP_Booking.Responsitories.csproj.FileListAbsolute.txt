@@ -1,0 +1,15 @@
+D:\CNPM\Project\SWP_Booking\SWP_Booking\SWP_Booking.Responsitories\bin\Debug\net8.0\SWP_Booking.Responsitories.deps.json
+D:\CNPM\Project\SWP_Booking\SWP_Booking\SWP_Booking.Responsitories\bin\Debug\net8.0\SWP_Booking.Responsitories.dll
+D:\CNPM\Project\SWP_Booking\SWP_Booking\SWP_Booking.Responsitories\bin\Debug\net8.0\SWP_Booking.Responsitories.pdb
+D:\CNPM\Project\SWP_Booking\SWP_Booking\SWP_Booking.Responsitories\obj\Debug\net8.0\SWP_Booking.Responsitories.GeneratedMSBuildEditorConfig.editorconfig
+D:\CNPM\Project\SWP_Booking\SWP_Booking\SWP_Booking.Responsitories\obj\Debug\net8.0\SWP_Booking.Responsitories.AssemblyInfoInputs.cache
+D:\CNPM\Project\SWP_Booking\SWP_Booking\SWP_Booking.Responsitories\obj\Debug\net8.0\SWP_Booking.Responsitories.AssemblyInfo.cs
+D:\CNPM\Project\SWP_Booking\SWP_Booking\SWP_Booking.Responsitories\obj\Debug\net8.0\SWP_Booking.Responsitories.csproj.CoreCompileInputs.cache
+D:\CNPM\Project\SWP_Booking\SWP_Booking\SWP_Booking.Responsitories\obj\Debug\net8.0\SWP_Booking.Responsitories.sourcelink.json
+D:\CNPM\Project\SWP_Booking\SWP_Booking\SWP_Booking.Responsitories\obj\Debug\net8.0\SWP_Booking.Responsitories.dll
+D:\CNPM\Project\SWP_Booking\SWP_Booking\SWP_Booking.Responsitories\obj\Debug\net8.0\refint\SWP_Booking.Responsitories.dll
+D:\CNPM\Project\SWP_Booking\SWP_Booking\SWP_Booking.Responsitories\obj\Debug\net8.0\SWP_Booking.Responsitories.pdb
+D:\CNPM\Project\SWP_Booking\SWP_Booking\SWP_Booking.Responsitories\obj\Debug\net8.0\ref\SWP_Booking.Responsitories.dll
+D:\CNPM\Project\SWP_Booking\SWP_Booking\SWP_Booking.Responsitories\bin\Debug\net8.0\SWP_Booking.Responsitories.runtimeconfig.json
+D:\CNPM\Project\SWP_Booking\SWP_Booking\SWP_Booking.Responsitories\obj\Debug\net8.0\SWP_Booking.Responsitories.csproj.AssemblyReference.cache
+D:\CNPM\Project\SWP_Booking\SWP_Booking\SWP_Booking.Responsitories\obj\Debug\net8.0\SWP_Booking.Responsitories.genruntimeconfig.cache
