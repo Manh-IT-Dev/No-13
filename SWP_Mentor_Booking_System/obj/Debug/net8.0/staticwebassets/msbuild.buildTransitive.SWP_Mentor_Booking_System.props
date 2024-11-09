@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\SWP_Mentor_Booking_System.props" />
+</Project>
