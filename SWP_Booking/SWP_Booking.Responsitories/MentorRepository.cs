@@ -16,29 +16,79 @@ namespace SWP_Booking.Repositories
         {
             _dbContext = dbContext;
         }
-        public Task<Mentor> AddMentorAsync(Mentor mentor)
+
+        public bool AddMentor(Mentor mentor)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _dbContext.Mentors.Add(mentor);
+                return _dbContext.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new NotImplementedException(ex.ToString());
+            }
         }
 
-        public Task DeleteMentorAsync(int id)
+        public bool DeleteMentor(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var mentorToDelete = _dbContext.Mentors.Find(id);
+                if (mentorToDelete != null)
+                {
+                    _dbContext.Mentors.Remove(mentorToDelete);
+                    return _dbContext.SaveChanges() > 0;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                throw new NotImplementedException(ex.ToString());
+            }
         }
 
-        public Task<Mentor> GetMentorByIdAsync(int id)
+        public bool DeleteMentor(Mentor mentor)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _dbContext.Mentors.Remove(mentor);
+                return _dbContext.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new NotImplementedException(ex.ToString());
+            }
         }
 
-        public async Task<List<Mentor>> GetMentorsAsync()
+        public async Task<List<Mentor>> GetAllMentor()
         {
-            return await _dbContext.Mentors.ToListAsync();
+            try
+            {
+                return await _dbContext.Mentors.ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new NotImplementedException(ex.ToString());
+            }
         }
 
-        public Task<Mentor> UpdateMentorAsync(Mentor mentor)
+        public async Task<Mentor> GetMentorById(int id)
         {
-            throw new NotImplementedException();
+            return await _dbContext.Mentors.FirstOrDefaultAsync(m => m.IdMentor == id);
+        }
+
+        public bool UpdateMentor(Mentor mentor)
+        {
+            try
+            {
+                _dbContext.Entry(mentor).State = EntityState.Modified;
+                return _dbContext.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new NotImplementedException(ex.ToString());
+            }
         }
     }
 }

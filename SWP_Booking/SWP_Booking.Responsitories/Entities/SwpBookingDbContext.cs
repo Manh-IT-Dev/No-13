@@ -68,11 +68,11 @@ public partial class SwpBookingDbContext : DbContext
             entity.Property(e => e.NgayDanhGia).HasColumnType("datetime");
             entity.Property(e => e.NhanXet).HasColumnType("text");
 
-            entity.HasOne(d => d.IdMentorNavigation).WithMany(p => p.DanhGia)
+            entity.HasOne(d => d.IdMentorNavigation).WithMany(p => p.DanhGias)
                 .HasForeignKey(d => d.IdMentor)
                 .HasConstraintName("FK__DanhGia__ID_Ment__534D60F1");
 
-            entity.HasOne(d => d.IdSinhVienNavigation).WithMany(p => p.DanhGia)
+            entity.HasOne(d => d.IdSinhVienNavigation).WithMany(p => p.DanhGias)
                 .HasForeignKey(d => d.IdSinhVien)
                 .HasConstraintName("FK__DanhGia__ID_Sinh__52593CB8");
         });

@@ -1,0 +1,46 @@
+﻿@page
+@model SWP_BookingWebApplication.Pages.SinhVien_html.DeleteModel
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>SinhVien</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SinhVien.Ten)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SinhVien.Ten)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SinhVien.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SinhVien.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SinhVien.MatKhau)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SinhVien.MatKhau)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SinhVien.DiemVi)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SinhVien.DiemVi)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SinhVien.LichSuGap)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SinhVien.LichSuGap)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="SinhVien.IdSinhVien" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

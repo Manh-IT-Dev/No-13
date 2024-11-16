@@ -11,15 +11,41 @@ namespace SWP_Booking.Services
 {
     public class AdminService : IAdminService
     {
-        private readonly IAdminRepository _repository;
+        private readonly IAdminRepository _adminRepository;
 
-        public AdminService(IAdminRepository repository)
+        public AdminService(IAdminRepository adminRepository)
         {
-            _repository = repository;
+            _adminRepository = adminRepository;
         }
-        public Task<List<Admin>> Admins()
+
+        public Task<List<Admin>> GetAllAdmin()
         {
-            return _repository.GetAdminsAsync();
+            return _adminRepository.GetAllAdmin();
+        }
+
+        public Task<Admin> GetAdminById(int id)
+        {
+            return _adminRepository.GetAdminById(id);
+        }
+
+        public bool AddAdmin(Admin admin)
+        {
+            return _adminRepository.AddAdmin(admin);
+        }
+
+        public bool DeleteAdmin(int id)
+        {
+            return _adminRepository.DeleteAdmin(id);
+        }
+
+        public bool DeleteAdmin(Admin admin)
+        {
+            return _adminRepository.DeleteAdmin(admin);
+        }
+
+        public bool UpdateAdmin(Admin admin)
+        {
+            return _adminRepository.UpdateAdmin(admin);
         }
     }
 }

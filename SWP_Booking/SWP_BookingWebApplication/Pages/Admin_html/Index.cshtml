@@ -1,0 +1,42 @@
+﻿@page
+@model SWP_BookingWebApplication.Pages.Admin_html.IndexModel
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Admin[0].IdAdmin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Admin[0].Ten)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Admin[0].Email)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Admin) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdAdmin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ten)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.IdAdmin">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.IdAdmin">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.IdAdmin">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

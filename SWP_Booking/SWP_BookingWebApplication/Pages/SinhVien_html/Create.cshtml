@@ -1,0 +1,48 @@
+﻿@page
+@model SWP_BookingWebApplication.Pages.SinhVien_html.CreateModel
+
+    <h4>SinhVien</h4>
+    <hr />
+    <div class="row">
+    <div class="col-md-4">
+    <form method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="SinhVien.IdSinhVien" class="control-label"></label>
+                <input asp-for="SinhVien.IdSinhVien" class="form-control" />
+                <span asp-validation-for="SinhVien.IdSinhVien" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SinhVien.Ten" class="control-label"></label>
+                <input asp-for="SinhVien.Ten" class="form-control" />
+                <span asp-validation-for="SinhVien.Ten" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SinhVien.Email" class="control-label"></label>
+                <input asp-for="SinhVien.Email" class="form-control" />
+                <span asp-validation-for="SinhVien.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SinhVien.MatKhau" class="control-label"></label>
+                <input asp-for="SinhVien.MatKhau" class="form-control" />
+                <span asp-validation-for="SinhVien.MatKhau" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SinhVien.LichSuGap" class="control-label"></label>
+                <input asp-for="SinhVien.LichSuGap" class="form-control" />
+                <span asp-validation-for="SinhVien.LichSuGap" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

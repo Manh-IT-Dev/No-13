@@ -1,0 +1,43 @@
+﻿@page
+@model SWP_BookingWebApplication.Pages.SinhVien_html.DetailsModel
+
+<div>
+    <h4>SinhVien</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SinhVien.Ten)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SinhVien.Ten)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SinhVien.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SinhVien.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SinhVien.MatKhau)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SinhVien.MatKhau)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SinhVien.DiemVi)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SinhVien.DiemVi)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SinhVien.LichSuGap)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SinhVien.LichSuGap)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.SinhVien.IdSinhVien">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

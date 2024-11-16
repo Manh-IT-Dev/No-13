@@ -17,29 +17,77 @@ namespace SWP_Booking.Repositories
         {
             _dbContext = dbContext;
         }
-        public Task<Admin> AddAdminAsync(Admin admin)
+        public async Task<List<Admin>> GetAllAdmin()
         {
-            throw new NotImplementedException();
+            try
+            {
+                return await _dbContext.Admins.Include(a => a.ThongKes).ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new NotImplementedException(ex.ToString());
+            }
+        }
+        public async Task<Admin> GetAdminById(int id)
+        {
+            return await _dbContext.Admins.Include(a => a.ThongKes).FirstOrDefaultAsync(a => a.IdAdmin == id);
         }
 
-        public Task DeleteAdminAsync(int id)
+        public bool DeleteAdmin(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var adminToDelete = _dbContext.Admins.Find(id);
+                if (adminToDelete != null)
+                {
+                    _dbContext.Admins.Remove(adminToDelete);
+                    return _dbContext.SaveChanges() > 0;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                throw new NotImplementedException(ex.ToString());
+            }
         }
 
-        public Task<Admin> GetAdminByIdAsync(int id)
+        public bool DeleteAdmin(Admin admin)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _dbContext.Admins.Remove(admin);
+                return _dbContext.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new NotImplementedException(ex.ToString());
+            }
         }
 
-        public async Task<List<Admin>> GetAdminsAsync()
+        public bool UpdateAdmin(Admin admin)
         {
-            return await _dbContext.Admins.ToListAsync();
+            try
+            {
+                _dbContext.Entry(admin).State = EntityState.Modified;
+                return _dbContext.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new NotImplementedException(ex.ToString());
+            }
         }
 
-        public Task<Admin> UpdateAdminAsync(Admin admin)
+        bool IAdminRepository.AddAdmin(Admin admin)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _dbContext.Admins.Add(admin);
+                return _dbContext.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new NotImplementedException(ex.ToString());
+            }
         }
     }
 }

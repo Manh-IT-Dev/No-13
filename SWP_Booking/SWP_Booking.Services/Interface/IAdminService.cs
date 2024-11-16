@@ -9,6 +9,12 @@ namespace SWP_Booking.Services.Interface
 {
     public interface IAdminService
     {
-        Task<List<Repositories.Entities.Admin>> Admins();
+        Task<List<Admin>> GetAllAdmin();
+        Task<Admin> GetAdminById(int id);
+        Boolean AddAdmin(Admin admin);
+        Boolean DeleteAdmin(int id);
+        Boolean DeleteAdmin(Admin admin);
+        Boolean UpdateAdmin(Admin admin);
+
     }
 }

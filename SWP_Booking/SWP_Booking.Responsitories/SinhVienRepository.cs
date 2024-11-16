@@ -17,29 +17,93 @@ namespace SWP_Booking.Repositories
         {
             _dbContext = dbContext;
         }
-        public Task<SinhVien> AddSinhVienAsync(SinhVien sinhVien)
+
+        public async Task<List<SinhVien>> GetAllSinhVien()
         {
-            throw new NotImplementedException();
+            try
+            {
+                return await _dbContext.SinhViens
+                    //.Include(s => s.DanhGias)
+                    //.Include(s => s.DiemVis)
+                    //.Include(s => s.LichGaps)
+                    //.Include(s => s.NhomDuAns)
+                    //.Include(s => s.ThongBaos)
+                    .ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while retrieving the sinhvien list.", ex);
+            }
         }
 
-        public Task DeleteSinhVienAsync(int id)
+        public async Task<SinhVien> GetSinhVienById(int id)
         {
-            throw new NotImplementedException();
+            return await _dbContext.SinhViens
+                    //.Include(s => s.DanhGias)
+                    //.Include(s => s.DiemVis)
+                    //.Include(s => s.LichGaps)
+                    //.Include(s => s.NhomDuAns)
+                    //.Include(s => s.ThongBaos)
+                    .FirstOrDefaultAsync(s => s.IdSinhVien == id);
         }
 
-        public Task<SinhVien> GetSinhVienByIdAsync(int id)
+        bool ISinhVienRepository.AddSinhVien(SinhVien sinhVien)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _dbContext.SinhViens.Add(sinhVien);
+                return _dbContext.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new NotImplementedException(ex.ToString());
+            }
         }
 
-        public async Task<List<SinhVien>> GetSinhViensAsync()
+        bool ISinhVienRepository.DeleteSinhVien(int id)
         {
-            return await _dbContext.SinhViens.ToListAsync();
+            try
+            {
+                var sinhVienToDelete = _dbContext.SinhViens.Find(id);
+                if (sinhVienToDelete != null)
+                {
+                    _dbContext.SinhViens.Remove(sinhVienToDelete);
+                    return _dbContext.SaveChanges() > 0;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                throw new NotImplementedException(ex.ToString());
+            }
         }
 
-        public Task<SinhVien> UpdateSinhVienAsync(SinhVien sinhVien)
+        public bool DeleteSinhVien(SinhVien sinhVien)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _dbContext.SinhViens.Remove(sinhVien);
+                return _dbContext.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new NotImplementedException(ex.ToString());
+            }
         }
+
+        bool ISinhVienRepository.UpdateSinhVien(SinhVien sinhVien)
+        {
+            try
+            {
+                _dbContext.Entry(sinhVien).State = EntityState.Modified;
+                return _dbContext.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new NotImplementedException(ex.ToString());
+            }
+        }
+
+
     }
 }

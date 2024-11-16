@@ -16,14 +16,79 @@ namespace SWP_Booking.Repositories
         {
             _dbContext = dbContext;
         }
-        public async Task<List<DiemVi>> GetDiemVisAsync()
+
+        public bool AddDiemVi(DiemVi diemVi)
         {
-            return await _dbContext.DiemVis.ToListAsync();
+            try
+            {
+                _dbContext.DiemVis.Add(diemVi);
+                return _dbContext.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new NotImplementedException(ex.ToString());
+            }
         }
 
-        public Task<DiemVi> GetDiemViByIdAsync(int id)
+        public bool DeleteDiemVi(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var diemViToDelete = _dbContext.DiemVis.Find(id);
+                if (diemViToDelete != null)
+                {
+                    _dbContext.DiemVis.Remove(diemViToDelete);
+                    return _dbContext.SaveChanges() > 0;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                throw new NotImplementedException(ex.ToString());
+            }
+        }
+
+        public bool DeleteDiemVi(DiemVi diemvi)
+        {
+            try
+            {
+                _dbContext.DiemVis.Remove(diemvi);
+                return _dbContext.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new NotImplementedException(ex.ToString());
+            }
+        }
+
+        public async Task<List<DiemVi>> GetAllDiemVi()
+        {
+            try
+            {
+                return await _dbContext.DiemVis.ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new NotImplementedException(ex.ToString());
+            }
+        }
+
+        public async Task<DiemVi> GetDiemViById(int id)
+        {
+            return await _dbContext.DiemVis.FirstOrDefaultAsync(v => v.IdDiemVi == id);
+        }
+
+        public bool UpdateDiemVi(DiemVi diemVi)
+        {
+            try
+            {
+                _dbContext.Entry(diemVi).State = EntityState.Modified;
+                return _dbContext.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new NotImplementedException(ex.ToString());
+            }
         }
     }
 }

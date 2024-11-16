@@ -7,7 +7,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SWP_Booking.Repositories", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SWP_Booking.Services", "SWP_Booking.Services\SWP_Booking.Services.csproj", "{003287E2-125F-4BF6-9763-139BF41FE1DB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SWP_Booking.WebApplication", "SWP_Booking.WebApplication\SWP_Booking.WebApplication.csproj", "{60F2D855-5F8C-466D-947B-AD2F2F826064}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWP_BookingWebApplication", "SWP_BookingWebApplication\SWP_BookingWebApplication.csproj", "{A824CF26-78E5-4983-898C-940EE2385803}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7C952978-8546-4975-89CB-D8E5E9AFD536}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +28,10 @@ Global
 		{003287E2-125F-4BF6-9763-139BF41FE1DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{003287E2-125F-4BF6-9763-139BF41FE1DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{003287E2-125F-4BF6-9763-139BF41FE1DB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{60F2D855-5F8C-466D-947B-AD2F2F826064}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{60F2D855-5F8C-466D-947B-AD2F2F826064}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{60F2D855-5F8C-466D-947B-AD2F2F826064}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{60F2D855-5F8C-466D-947B-AD2F2F826064}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A824CF26-78E5-4983-898C-940EE2385803}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A824CF26-78E5-4983-898C-940EE2385803}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A824CF26-78E5-4983-898C-940EE2385803}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A824CF26-78E5-4983-898C-940EE2385803}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

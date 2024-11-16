@@ -16,39 +16,79 @@ namespace SWP_Booking.Repositories
         {
             _dbContext = dbContext;
         }
-        public Task<DanhGia> AddDanhGiaAsync(DanhGia danhGia)
+
+        public bool AddDanhGia(DanhGia danhgia)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _dbContext.DanhGias.Add(danhgia);
+                return _dbContext.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new NotImplementedException(ex.ToString());
+            }
         }
 
-        public Task DeleteDanhGiaAsync(int id)
+        public bool DeleteDanhGia(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var danhGiaToDelete = _dbContext.DanhGias.Find(id);
+                if (danhGiaToDelete != null)
+                {
+                    _dbContext.DanhGias.Remove(danhGiaToDelete);
+                    return _dbContext.SaveChanges() > 0;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                throw new NotImplementedException(ex.ToString());
+            }
         }
 
-        public Task<DanhGia> GetDanhGiaByIdAsync(int id)
+        public bool DeleteDanhGia(DanhGia danhGia)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _dbContext.DanhGias.Remove(danhGia);
+                return _dbContext.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new NotImplementedException(ex.ToString());
+            }
         }
 
-        public async Task<List<DanhGia>> GetDanhGiasAsync()
+        public async Task<List<DanhGia>> GetAllDanhGia()
         {
-            return await _dbContext.DanhGias.ToListAsync();
+            try
+            {
+                return await _dbContext.DanhGias.ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new NotImplementedException(ex.ToString());
+            }
         }
 
-        public Task<List<DanhGia>> GetDanhGiasByMentorAsync(int idMentor)
+        public async Task<DanhGia> GetDanhGiaById(int id)
         {
-            throw new NotImplementedException();
+            return await _dbContext.DanhGias.FirstOrDefaultAsync(d => d.IdDanhGia == id);
         }
 
-        public Task<List<DanhGia>> GetDanhGiasBySinhVienAsync(int idSinhVien)
+        public bool UpdateDanhGia(DanhGia danhGia)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task<DanhGia> UpdateDanhGiaAsync(DanhGia danhGia)
-        {
-            throw new NotImplementedException();
+            try
+            {
+                _dbContext.Entry(danhGia).State = EntityState.Modified;
+                return _dbContext.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new NotImplementedException(ex.ToString());
+            }
         }
     }
 }

@@ -17,7 +17,7 @@ public partial class Mentor
 
     public string? LichLamViec { get; set; }
 
-    public virtual ICollection<DanhGia> DanhGia { get; set; } = new List<DanhGia>();
+    public virtual ICollection<DanhGia> DanhGias { get; set; } = new List<DanhGia>();
 
     public virtual ICollection<LichGap> LichGaps { get; set; } = new List<LichGap>();
 }

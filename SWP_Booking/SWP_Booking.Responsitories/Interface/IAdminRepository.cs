@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SWP_Booking.Repositories.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,10 +9,11 @@ namespace SWP_Booking.Repositories.Interface
 {
     public interface IAdminRepository
     {
-        Task<List<Entities.Admin>> GetAdminsAsync();
-        Task<Entities.Admin> GetAdminByIdAsync(int id);
-        Task<Entities.Admin> AddAdminAsync(Entities.Admin admin);
-        Task<Entities.Admin> UpdateAdminAsync(Entities.Admin admin);
-        Task DeleteAdminAsync(int id);
+        Task<List<Admin>> GetAllAdmin();
+        Task<Admin> GetAdminById(int id);
+        Boolean AddAdmin(Admin admin);
+        Boolean DeleteAdmin(int id);
+        Boolean DeleteAdmin(Admin admin);
+        Boolean UpdateAdmin(Admin admin);
     }
 }

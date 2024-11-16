@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SWP_Booking.Repositories.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,10 +9,11 @@ namespace SWP_Booking.Repositories.Interface
 {
     public interface IMentorRepository
     {
-        Task<List<Entities.Mentor>> GetMentorsAsync();
-        Task<Entities.Mentor> GetMentorByIdAsync(int id);
-        Task<Entities.Mentor> AddMentorAsync(Entities.Mentor mentor);
-        Task<Entities.Mentor> UpdateMentorAsync(Entities.Mentor mentor);
-        Task DeleteMentorAsync(int id);
+        Task<List<Mentor>> GetAllMentor();
+        Task<Mentor> GetMentorById(int id);
+        Boolean AddMentor(Mentor mentor);
+        Boolean DeleteMentor(int id);
+        Boolean DeleteMentor(Mentor mentor);
+        Boolean UpdateMentor(Mentor mentor);
     }
 }
