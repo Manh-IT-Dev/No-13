@@ -65,7 +65,7 @@ namespace SWP_Booking.Repositories
         {
             try
             {
-                return await _dbContext.DiemVis.ToListAsync();
+                return await _dbContext.DiemVis.Include(s => s.IdSinhVienNavigation).ToListAsync();
             }
             catch (Exception ex)
             {
@@ -75,7 +75,7 @@ namespace SWP_Booking.Repositories
 
         public async Task<DiemVi> GetDiemViById(int id)
         {
-            return await _dbContext.DiemVis.FirstOrDefaultAsync(v => v.IdDiemVi == id);
+            return await _dbContext.DiemVis.Include(s => s.IdSinhVienNavigation).FirstOrDefaultAsync(v => v.IdDiemVi == id);
         }
 
         public bool UpdateDiemVi(DiemVi diemVi)

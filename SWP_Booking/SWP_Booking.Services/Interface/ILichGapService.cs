@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SWP_Booking.Repositories.Interface
+namespace SWP_Booking.Services.Interface
 {
-    public interface ILichGapRepository
+    public interface ILichGapService
     {
         Task<List<LichGap>> GetAllLichGap();
         Task<LichGap> GetLichGapById(int id);
@@ -15,6 +15,5 @@ namespace SWP_Booking.Repositories.Interface
         Boolean DeleteLichGap(int id);
         Boolean DeleteLichGap(LichGap lichGap);
         Boolean UpdateLichGap(LichGap lichGap);
-
     }
 }

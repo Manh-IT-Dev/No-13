@@ -16,14 +16,79 @@ namespace SWP_Booking.Repositories
         {
             _dbContext = dbContext;
         }
-        public Task<ThongKe> GetThongKeByIdAsync(int id)
+
+        public bool AddThongKe(ThongKe thongKe)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _dbContext.ThongKes.Add(thongKe);
+                return _dbContext.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new NotImplementedException(ex.ToString());
+            }
         }
 
-        public async Task<List<ThongKe>> GetThongKesAsync()
+        public bool DeleteThongKe(int id)
         {
-            return await _dbContext.ThongKes.ToListAsync();
+            try
+            {
+                var thongKeToDelete = _dbContext.ThongKes.Find(id);
+                if (thongKeToDelete != null)
+                {
+                    _dbContext.ThongKes.Remove(thongKeToDelete);
+                    return _dbContext.SaveChanges() > 0;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                throw new NotImplementedException(ex.ToString());
+            }
+        }
+
+        public bool DeleteThongKe(ThongKe thongKe)
+        {
+            try
+            {
+                _dbContext.ThongKes.Remove(thongKe);
+                return _dbContext.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new NotImplementedException(ex.ToString());
+            }
+        }
+
+        public async Task<List<ThongKe>> GetAllThongKe()
+        {
+            try
+            {
+                return await _dbContext.ThongKes.Include(t => t.IdAdminNavigation).ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new NotImplementedException(ex.ToString());
+            }
+        }
+
+        public async Task<ThongKe> GetThongKeById(int id)
+        {
+            return await _dbContext.ThongKes.Include(t => t.IdAdminNavigation).FirstOrDefaultAsync(t => t.IdThongKe == id);
+        }
+
+        public bool UpdateThongKe(ThongKe thongKe)
+        {
+            try
+            {
+                _dbContext.Entry(thongKe).State = EntityState.Modified;
+                return _dbContext.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new NotImplementedException(ex.ToString());
+            }
         }
     }
 }

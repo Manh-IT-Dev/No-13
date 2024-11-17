@@ -16,9 +16,80 @@ namespace SWP_Booking.Repositories
         {
             _dbContext = dbContext;
         }
-        public async Task<List<ThongBao>> GetThongBaosAsync()
+
+        public bool AddThongBao(ThongBao thongBao)
         {
-            return await _dbContext.ThongBaos.ToListAsync();
+            try
+            {
+                _dbContext.ThongBaos.Add(thongBao);
+                return _dbContext.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new NotImplementedException(ex.ToString());
+            }
+        }
+
+        public bool DeleteThongBao(int id)
+        {
+
+            try
+            {
+                var thongBaoToDelete = _dbContext.ThongBaos.Find(id);
+                if (thongBaoToDelete != null)
+                {
+                    _dbContext.ThongBaos.Remove(thongBaoToDelete);
+                    return _dbContext.SaveChanges() > 0;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                throw new NotImplementedException(ex.ToString());
+            }
+        }
+
+        public bool DeleteThongBao(ThongBao thongBao)
+        {
+            try
+            {
+                _dbContext.ThongBaos.Remove(thongBao);
+                return _dbContext.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new NotImplementedException(ex.ToString());
+            }
+        }
+
+        public async Task<List<ThongBao>> GetAllThongBao()
+        {
+            try
+            {
+                return await _dbContext.ThongBaos.Include(t => t.IdSinhVienNavigation).ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new NotImplementedException(ex.ToString());
+            }
+        }
+
+        public async Task<ThongBao> GetThongBaoById(int id)
+        {
+            return await _dbContext.ThongBaos.Include(t => t.IdSinhVienNavigation).FirstOrDefaultAsync(t => t.IdThongBao == id);
+        }
+
+        public bool UpdateThongBao(ThongBao thongBao)
+        {
+            try
+            {
+                _dbContext.Entry(thongBao).State = EntityState.Modified;
+                return _dbContext.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new NotImplementedException(ex.ToString());
+            }
         }
     }
 }

@@ -65,7 +65,10 @@ namespace SWP_Booking.Repositories
         {
             try
             {
-                return await _dbContext.DanhGias.ToListAsync();
+                return await _dbContext.DanhGias
+                    .Include(d => d.IdSinhVienNavigation)
+                    .Include(d => d.IdSinhVienNavigation)
+                    .ToListAsync();
             }
             catch (Exception ex)
             {
@@ -75,7 +78,10 @@ namespace SWP_Booking.Repositories
 
         public async Task<DanhGia> GetDanhGiaById(int id)
         {
-            return await _dbContext.DanhGias.FirstOrDefaultAsync(d => d.IdDanhGia == id);
+            return await _dbContext.DanhGias
+                .Include(d => d.IdSinhVienNavigation)
+                .Include(d => d.IdSinhVienNavigation)
+                .FirstOrDefaultAsync(d => d.IdDanhGia == id);
         }
 
         public bool UpdateDanhGia(DanhGia danhGia)

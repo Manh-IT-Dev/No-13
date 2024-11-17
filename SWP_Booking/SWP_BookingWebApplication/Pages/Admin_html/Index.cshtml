@@ -16,6 +16,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Admin[0].Email)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Admin[0].MatKhau)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -31,6 +34,9 @@
             <td>
                     @Html.DisplayFor(modelItem => item.Email)
             </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MatKhau)
+                </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.IdAdmin">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.IdAdmin">Details</a> |

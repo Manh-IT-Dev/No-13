@@ -22,13 +22,7 @@ namespace SWP_Booking.Repositories
         {
             try
             {
-                return await _dbContext.SinhViens
-                    //.Include(s => s.DanhGias)
-                    //.Include(s => s.DiemVis)
-                    //.Include(s => s.LichGaps)
-                    //.Include(s => s.NhomDuAns)
-                    //.Include(s => s.ThongBaos)
-                    .ToListAsync();
+                return await _dbContext.SinhViens.ToListAsync();
             }
             catch (Exception ex)
             {
@@ -38,13 +32,7 @@ namespace SWP_Booking.Repositories
 
         public async Task<SinhVien> GetSinhVienById(int id)
         {
-            return await _dbContext.SinhViens
-                    //.Include(s => s.DanhGias)
-                    //.Include(s => s.DiemVis)
-                    //.Include(s => s.LichGaps)
-                    //.Include(s => s.NhomDuAns)
-                    //.Include(s => s.ThongBaos)
-                    .FirstOrDefaultAsync(s => s.IdSinhVien == id);
+            return await _dbContext.SinhViens.FirstOrDefaultAsync(s => s.IdSinhVien == id);
         }
 
         bool ISinhVienRepository.AddSinhVien(SinhVien sinhVien)

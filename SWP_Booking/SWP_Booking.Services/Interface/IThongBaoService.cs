@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SWP_Booking.Repositories.Interface
+namespace SWP_Booking.Services.Interface
 {
-    public interface IThongBaoRepository
+    public interface IThongBaoService
     {
         Task<List<ThongBao>> GetAllThongBao();
         Task<ThongBao> GetThongBaoById(int id);

@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SWP_Booking.Repositories.Interface
+namespace SWP_Booking.Services.Interface
 {
-    public interface IThongKeRepository
+    public interface IThongKeService
     {
         Task<List<ThongKe>> GetAllThongKe();
         Task<ThongKe> GetThongKeById(int id);

@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SWP_Booking.Repositories.Interface
+namespace SWP_Booking.Services.Interface
 {
-    public interface INhomDuAnRepository
+    public interface INhomDuAnService
     {
         Task<List<NhomDuAn>> GetAllNhomDuAn();
         Task<NhomDuAn> GetNhomDuAnById(int id);
