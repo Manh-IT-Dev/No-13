@@ -1,0 +1,65 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" />
+    <Compile Include="obj\Debug\net8.0\SWP_Mentor_Booking_System.AssemblyInfo.cs" />
+    <Compile Include="obj\Debug\net8.0\SWP_Mentor_Booking_System.GlobalUsings.g.cs" />
+    <Compile Include="obj\Debug\net8.0\SWP_Mentor_Booking_System.RazorAssemblyInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="bin\Debug\net8.0\appsettings.Development.json" />
+    <Content Include="bin\Debug\net8.0\appsettings.json" />
+    <Content Include="bin\Debug\net8.0\SWP_Mentor_Booking_System.deps.json" />
+    <Content Include="bin\Debug\net8.0\SWP_Mentor_Booking_System.runtimeconfig.json" />
+    <Content Include="bin\Debug\net8.0\SWP_Mentor_Booking_System.staticwebassets.runtime.json" />
+    <Content Include="obj\Debug\net8.0\scopedcss\bundle\SWP_Mentor_Booking_System.styles.css" />
+    <Content Include="obj\Debug\net8.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css" />
+    <Content Include="obj\Debug\net8.0\scopedcss\projectbundle\SWP_Mentor_Booking_System.bundle.scp.css" />
+    <Content Include="obj\Debug\net8.0\staticwebassets.build.json" />
+    <Content Include="obj\Debug\net8.0\staticwebassets.development.json" />
+    <Content Include="obj\Debug\net8.0\staticwebassets.pack.json" />
+    <Content Include="obj\Debug\net8.0\staticwebassets.removed.txt" />
+    <Content Include="obj\Debug\net8.0\SWP_Mentor_Booking_System.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\net8.0\SWP_Mentor_Booking_System.sourcelink.json" />
+    <Content Include="obj\project.assets.json" />
+    <Content Include="obj\SWP_Mentor_Booking_System.csproj.nuget.dgspec.json" />
+    <Content Include="Properties\launchSettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\net8.0\SWP_Mentor_Booking_System.dll" />
+    <None Include="bin\Debug\net8.0\SWP_Mentor_Booking_System.exe" />
+    <None Include="bin\Debug\net8.0\SWP_Mentor_Booking_System.pdb" />
+    <None Include="obj\Debug\net8.0\apphost.exe" />
+    <None Include="obj\Debug\net8.0\project.razor.vs.bin" />
+    <None Include="obj\Debug\net8.0\refint\SWP_Mentor_Booking_System.dll" />
+    <None Include="obj\Debug\net8.0\ref\SWP_Mentor_Booking_System.dll" />
+    <None Include="obj\Debug\net8.0\staticwebassets\msbuild.build.SWP_Mentor_Booking_System.props" />
+    <None Include="obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.SWP_Mentor_Booking_System.props" />
+    <None Include="obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.SWP_Mentor_Booking_System.props" />
+    <None Include="obj\Debug\net8.0\staticwebassets\msbuild.SWP_Mentor_Booking_System.Microsoft.AspNetCore.StaticWebAssets.props" />
+    <None Include="obj\Debug\net8.0\SWP_Mentor_Booking_System.AssemblyInfoInputs.cache" />
+    <None Include="obj\Debug\net8.0\SWP_Mentor_Booking_System.assets.cache" />
+    <None Include="obj\Debug\net8.0\SWP_Mentor_Booking_System.csproj.BuildWithSkipAnalyzers" />
+    <None Include="obj\Debug\net8.0\SWP_Mentor_Booking_System.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\net8.0\SWP_Mentor_Booking_System.dll" />
+    <None Include="obj\Debug\net8.0\SWP_Mentor_Booking_System.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="obj\Debug\net8.0\SWP_Mentor_Booking_System.genruntimeconfig.cache" />
+    <None Include="obj\Debug\net8.0\SWP_Mentor_Booking_System.MvcApplicationPartsAssemblyInfo.cache" />
+    <None Include="obj\Debug\net8.0\SWP_Mentor_Booking_System.pdb" />
+    <None Include="obj\Debug\net8.0\SWP_Mentor_Booking_System.RazorAssemblyInfo.cache" />
+    <None Include="obj\project.nuget.cache" />
+    <None Include="obj\SWP_Mentor_Booking_System.csproj.nuget.g.props" />
+    <None Include="obj\SWP_Mentor_Booking_System.csproj.nuget.g.targets" />
+    <None Include="SWP_Mentor_Booking_System.csproj" />
+    <None Include="SWP_Mentor_Booking_System.csproj.user" />
+  </ItemGroup>
+
+</Project>

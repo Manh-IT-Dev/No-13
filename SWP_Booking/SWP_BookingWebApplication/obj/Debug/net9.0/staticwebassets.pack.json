@@ -5,12 +5,20 @@
       "PackagePath": "staticwebassets\\SWP_BookingWebApplication.lggoyu8xzv.bundle.scp.css"
     },
     {
+      "Id": "D:\\CNPM\\Project\\SWP_Booking\\SWP_Booking\\SWP_BookingWebApplication\\wwwroot\\css\\Index.css",
+      "PackagePath": "staticwebassets\\css\\Index.css"
+    },
+    {
       "Id": "D:\\CNPM\\Project\\SWP_Booking\\SWP_Booking\\SWP_BookingWebApplication\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "D:\\CNPM\\Project\\SWP_Booking\\SWP_Booking\\SWP_BookingWebApplication\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\CNPM\\Project\\SWP_Booking\\SWP_Booking\\SWP_BookingWebApplication\\wwwroot\\img\\ảnh trong.jpeg",
+      "PackagePath": "staticwebassets\\img\\ảnh trong.jpeg"
     },
     {
       "Id": "D:\\CNPM\\Project\\SWP_Booking\\SWP_Booking\\SWP_BookingWebApplication\\wwwroot\\js\\site.js",

@@ -15,5 +15,7 @@ namespace SWP_Booking.Repositories.Interface
         Boolean DeleteSinhVien(int id);
         Boolean DeleteSinhVien(SinhVien sinhVien);
         Boolean UpdateSinhVien(SinhVien sinhVien);
+
+
     }
 }

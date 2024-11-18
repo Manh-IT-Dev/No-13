@@ -1,0 +1,43 @@
+﻿@page
+@model SWP_BookingWebApplication.Pages.DanhGia_html.DetailsModel
+
+<div>
+    <h4>DanhGia</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DanhGia.DiemDanhGia)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DanhGia.DiemDanhGia)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DanhGia.NhanXet)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DanhGia.NhanXet)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DanhGia.NgayDanhGia)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DanhGia.NgayDanhGia)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DanhGia.EmailMentor)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DanhGia.EmailMentor.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DanhGia.EmailSinhVien)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DanhGia.EmailSinhVien.Email)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.DanhGia.IdDanhGia">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

@@ -41,6 +41,11 @@ namespace SWP_Booking.Services
             return _thongBaoRepository.GetThongBaoById(id);
         }
 
+        public Task<List<ThongBao>> GetThongBaoByIdSinhVien(int idSinhVien)
+        {
+            return _thongBaoRepository.GetThongBaoByIdSinhVien(idSinhVien);
+        }
+
         public bool UpdateThongBao(ThongBao thongBao)
         {
             return _thongBaoRepository.UpdateThongBao(thongBao);

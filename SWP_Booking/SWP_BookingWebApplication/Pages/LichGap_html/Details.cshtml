@@ -1,0 +1,37 @@
+﻿@page
+@model SWP_BookingWebApplication.Pages.LichGap_html.DetailsModel
+
+<div>
+    <h4>LichGap</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LichGap.ThoiGian)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LichGap.ThoiGian)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LichGap.TrangThai)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LichGap.TrangThai)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LichGap.IdMentorNavigation)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LichGap.IdMentorNavigation.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LichGap.IdSinhVienNavigation)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LichGap.IdSinhVienNavigation.Email)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.LichGap.IdLichGap">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

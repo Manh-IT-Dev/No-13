@@ -48,12 +48,124 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5faHRtbFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/DanhGia_html/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFuaEdpYV9odG1sXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/DanhGia_html/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFuaEdpYV9odG1sXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/DanhGia_html/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFuaEdpYV9odG1sXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/DanhGia_html/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFuaEdpYV9odG1sXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/DanhGia_html/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFuaEdpYV9odG1sXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/DiemVi_html/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGllbVZpX2h0bWxcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/DiemVi_html/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGllbVZpX2h0bWxcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/DiemVi_html/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGllbVZpX2h0bWxcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/DiemVi_html/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGllbVZpX2h0bWxcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/DiemVi_html/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGllbVZpX2h0bWxcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/GiaoDienNguoiDung/DangKy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2lhb0RpZW5OZ3VvaUR1bmdcRGFuZ0t5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/GiaoDienNguoiDung/DangNhap.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2lhb0RpZW5OZ3VvaUR1bmdcRGFuZ05oYXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/GiaoDienNguoiDung/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2lhb0RpZW5OZ3VvaUR1bmdcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/LichGap_html/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGljaEdhcF9odG1sXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/LichGap_html/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGljaEdhcF9odG1sXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/LichGap_html/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGljaEdhcF9odG1sXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/LichGap_html/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGljaEdhcF9odG1sXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/LichGap_html/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGljaEdhcF9odG1sXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/Mentor_html/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVudG9yX2h0bWxcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/Mentor_html/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVudG9yX2h0bWxcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/Mentor_html/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVudG9yX2h0bWxcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/Mentor_html/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVudG9yX2h0bWxcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/Mentor_html/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVudG9yX2h0bWxcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/NhomDuAn_html/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTmhvbUR1QW5faHRtbFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/NhomDuAn_html/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTmhvbUR1QW5faHRtbFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/NhomDuAn_html/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTmhvbUR1QW5faHRtbFxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/NhomDuAn_html/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTmhvbUR1QW5faHRtbFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/NhomDuAn_html/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTmhvbUR1QW5faHRtbFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/Privacy.cshtml]
@@ -82,6 +194,46 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/SinhVien_html/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2luaFZpZW5faHRtbFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/ThongBao_html/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGhvbmdCYW9faHRtbFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/ThongBao_html/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGhvbmdCYW9faHRtbFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/ThongBao_html/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGhvbmdCYW9faHRtbFxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/ThongBao_html/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGhvbmdCYW9faHRtbFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/ThongBao_html/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGhvbmdCYW9faHRtbFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/ThongKe_html/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGhvbmdLZV9odG1sXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/ThongKe_html/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGhvbmdLZV9odG1sXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/ThongKe_html/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGhvbmdLZV9odG1sXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/ThongKe_html/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGhvbmdLZV9odG1sXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/ThongKe_html/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGhvbmdLZV9odG1sXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/CNPM/Project/SWP_Booking/SWP_Booking/SWP_BookingWebApplication/Pages/_ViewImports.cshtml]

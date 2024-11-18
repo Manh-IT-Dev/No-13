@@ -17,7 +17,7 @@ public partial class SinhVien
 
     public string? LichSuGap { get; set; }
 
-    public virtual ICollection<DanhGia> DanhGias { get; set; } = new List<DanhGia>();
+    public virtual ICollection<DanhGia> DanhGia { get; set; } = new List<DanhGia>();
 
     public virtual ICollection<DiemVi> DiemVis { get; set; } = new List<DiemVi>();
 

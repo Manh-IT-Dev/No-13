@@ -1,0 +1,54 @@
+﻿@page
+@model SWP_BookingWebApplication.Pages.DanhGia_html.EditModel
+
+<h4>DanhGia</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="DanhGia.IdDanhGia" />
+            <div class="form-group">
+                
+                <label asp-for="DanhGia.IdSinhVien" class="control-label"></label>
+                <select asp-for="DanhGia.IdSinhVien" class="form-control" asp-items="ViewBag.IdSinhVien"></select>
+                <span asp-validation-for="DanhGia.IdSinhVien" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                <label asp-for="DanhGia.IdMentor" class="control-label"></label>
+                <select asp-for="DanhGia.IdMentor" class="form-control" asp-items="ViewBag.IdMentor"></select>
+                <span asp-validation-for="DanhGia.IdMentor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                <label asp-for="DanhGia.DiemDanhGia" class="control-label"></label>
+                <input asp-for="DanhGia.DiemDanhGia" class="form-control" />
+                <span asp-validation-for="DanhGia.DiemDanhGia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                <label asp-for="DanhGia.NhanXet" class="control-label"></label>
+                <input asp-for="DanhGia.NhanXet" class="form-control" />
+                <span asp-validation-for="DanhGia.NhanXet" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                <label asp-for="DanhGia.NgayDanhGia" class="control-label"></label>
+                <input asp-for="DanhGia.NgayDanhGia" class="form-control" />
+                <span asp-validation-for="DanhGia.NgayDanhGia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

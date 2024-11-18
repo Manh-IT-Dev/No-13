@@ -1,0 +1,48 @@
+﻿@page
+@model SWP_BookingWebApplication.Pages.ThongBao_html.EditModel
+
+<h4>ThongBao</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ThongBao.IdThongBao" />
+            <div class="form-group">
+                
+                <label asp-for="ThongBao.IdSinhVien" class="control-label"></label>
+                <select asp-for="ThongBao.IdSinhVien" class="form-control" asp-items="ViewBag.IdSinhVien"></select>
+                <span asp-validation-for="ThongBao.IdSinhVien" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                <label asp-for="ThongBao.NoiDung" class="control-label"></label>
+                <input asp-for="ThongBao.NoiDung" class="form-control" />
+                <span asp-validation-for="ThongBao.NoiDung" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                <label asp-for="ThongBao.NgayGui" class="control-label"></label>
+                <input asp-for="ThongBao.NgayGui" class="form-control" />
+                <span asp-validation-for="ThongBao.NgayGui" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                <label asp-for="ThongBao.TrangThai" class="control-label"></label>
+                <input asp-for="ThongBao.TrangThai" class="form-control" />
+                <span asp-validation-for="ThongBao.TrangThai" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

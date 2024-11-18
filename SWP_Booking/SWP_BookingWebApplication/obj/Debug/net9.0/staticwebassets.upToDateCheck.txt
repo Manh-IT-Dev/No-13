@@ -33,6 +33,7 @@ D:\CNPM\Project\SWP_Booking\SWP_Booking\SWP_BookingWebApplication\wwwroot\lib\bo
 D:\CNPM\Project\SWP_Booking\SWP_Booking\SWP_BookingWebApplication\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
 D:\CNPM\Project\SWP_Booking\SWP_Booking\SWP_BookingWebApplication\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
 D:\CNPM\Project\SWP_Booking\SWP_Booking\SWP_BookingWebApplication\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
+D:\CNPM\Project\SWP_Booking\SWP_Booking\SWP_BookingWebApplication\wwwroot\css\Index.css
 D:\CNPM\Project\SWP_Booking\SWP_Booking\SWP_BookingWebApplication\wwwroot\favicon.ico
 D:\CNPM\Project\SWP_Booking\SWP_Booking\SWP_BookingWebApplication\wwwroot\lib\jquery-validation\LICENSE.md
 D:\CNPM\Project\SWP_Booking\SWP_Booking\SWP_BookingWebApplication\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
@@ -57,8 +58,10 @@ D:\CNPM\Project\SWP_Booking\SWP_Booking\SWP_BookingWebApplication\wwwroot\lib\bo
 D:\CNPM\Project\SWP_Booking\SWP_Booking\SWP_BookingWebApplication\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
 D:\CNPM\Project\SWP_Booking\SWP_Booking\SWP_BookingWebApplication\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
 D:\CNPM\Project\SWP_Booking\SWP_Booking\SWP_BookingWebApplication\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
+wwwroot\css\Index.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\img\ảnh trong.jpeg
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map

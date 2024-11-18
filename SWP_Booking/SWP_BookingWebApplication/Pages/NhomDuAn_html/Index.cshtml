@@ -1,0 +1,48 @@
+﻿@page
+@model SWP_BookingWebApplication.Pages.NhomDuAn_html.IndexModel
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NhomDuAn[0].TenNhom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NhomDuAn[0].ChuDeDuAn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NhomDuAn[0].TienDo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NhomDuAn[0].IdSinhVienNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.NhomDuAn) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenNhom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChuDeDuAn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TienDo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdSinhVienNavigation.Email)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.IdNhom">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.IdNhom">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.IdNhom">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

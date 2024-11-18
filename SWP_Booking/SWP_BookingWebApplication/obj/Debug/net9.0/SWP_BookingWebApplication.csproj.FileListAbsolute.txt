@@ -329,3 +329,4 @@ D:\CNPM\Project\SWP_Booking\SWP_Booking\SWP_BookingWebApplication\obj\Debug\net9
 D:\CNPM\Project\SWP_Booking\SWP_Booking\SWP_BookingWebApplication\obj\Debug\net9.0\SWP_BookingWebApplication.pdb
 D:\CNPM\Project\SWP_Booking\SWP_Booking\SWP_BookingWebApplication\obj\Debug\net9.0\SWP_BookingWebApplication.genruntimeconfig.cache
 D:\CNPM\Project\SWP_Booking\SWP_Booking\SWP_BookingWebApplication\obj\Debug\net9.0\ref\SWP_BookingWebApplication.dll
+D:\CNPM\Project\SWP_Booking\SWP_Booking\SWP_BookingWebApplication\obj\Debug\net9.0\compressed\my6dbjt3yg-3b80lyqw7j.gz

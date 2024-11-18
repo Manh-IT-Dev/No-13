@@ -65,7 +65,10 @@ namespace SWP_Booking.Repositories
         {
             try
             {
-                return await _dbContext.Mentors.ToListAsync();
+                return await _dbContext.Mentors
+                    .Include(m => m.DanhGia)
+                    .Include(m => m.LichGaps)
+                    .ToListAsync();
             }
             catch (Exception ex)
             {
@@ -75,7 +78,10 @@ namespace SWP_Booking.Repositories
 
         public async Task<Mentor> GetMentorById(int id)
         {
-            return await _dbContext.Mentors.FirstOrDefaultAsync(m => m.IdMentor == id);
+            return await _dbContext.Mentors
+                 .Include(m => m.DanhGia)
+                 .Include(m => m.LichGaps)
+                 .FirstOrDefaultAsync(m => m.IdMentor == id);
         }
 
         public bool UpdateMentor(Mentor mentor)

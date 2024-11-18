@@ -1,0 +1,48 @@
+﻿@page
+@model SWP_BookingWebApplication.Pages.ThongBao_html.IndexModel
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ThongBao[0].NoiDung)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ThongBao[0].NgayGui)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ThongBao[0].TrangThai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ThongBao[0].IdSinhVienNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.ThongBao) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NoiDung)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.NgayGui);
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrangThai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdSinhVienNavigation.Email)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.IdThongBao">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.IdThongBao">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.IdThongBao">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

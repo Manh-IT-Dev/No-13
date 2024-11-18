@@ -1,0 +1,42 @@
+﻿@page
+@model SWP_BookingWebApplication.Pages.DiemVi_html.EditModel
+
+<h4>DiemVi</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="DiemVi.IdDiemVi" />
+            <div class="form-group">
+                
+                <label asp-for="DiemVi.IdSinhVien" class="control-label"></label>
+                <select asp-for="DiemVi.IdSinhVien" class="form-control" asp-items="ViewBag.IdSinhVien"></select>
+                <span asp-validation-for="DiemVi.IdSinhVien" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                <label asp-for="DiemVi.SoDiem" class="control-label"></label>
+                <input asp-for="DiemVi.SoDiem" class="form-control" />
+                <span asp-validation-for="DiemVi.SoDiem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                <label asp-for="DiemVi.NgayCapNhat" class="control-label"></label>
+                <input asp-for="DiemVi.NgayCapNhat" class="form-control" />
+                <span asp-validation-for="DiemVi.NgayCapNhat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

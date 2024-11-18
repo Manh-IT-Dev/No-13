@@ -6,7 +6,9 @@ namespace SWP_Booking.Repositories.Entities;
 
 public partial class SwpBookingDbContext : DbContext
 {
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.
     public SwpBookingDbContext()
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.
     {
     }
 
@@ -17,7 +19,7 @@ public partial class SwpBookingDbContext : DbContext
 
     public virtual DbSet<Admin> Admins { get; set; }
 
-    public virtual DbSet<DanhGia> DanhGias { get; set; }
+    public virtual DbSet<DanhGia> DanhGia { get; set; }
 
     public virtual DbSet<DiemVi> DiemVis { get; set; }
 
@@ -68,11 +70,11 @@ public partial class SwpBookingDbContext : DbContext
             entity.Property(e => e.NgayDanhGia).HasColumnType("datetime");
             entity.Property(e => e.NhanXet).HasColumnType("text");
 
-            entity.HasOne(d => d.IdMentorNavigation).WithMany(p => p.DanhGias)
+            entity.HasOne(d => d.EmailMentor).WithMany(p => p.DanhGia)
                 .HasForeignKey(d => d.IdMentor)
                 .HasConstraintName("FK__DanhGia__ID_Ment__534D60F1");
 
-            entity.HasOne(d => d.IdSinhVienNavigation).WithMany(p => p.DanhGias)
+            entity.HasOne(d => d.EmailSinhVien).WithMany(p => p.DanhGia)
                 .HasForeignKey(d => d.IdSinhVien)
                 .HasConstraintName("FK__DanhGia__ID_Sinh__52593CB8");
         });

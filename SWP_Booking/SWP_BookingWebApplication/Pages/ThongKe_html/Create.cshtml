@@ -1,0 +1,47 @@
+﻿@page
+@model SWP_BookingWebApplication.Pages.ThongKe_html.CreateModel
+
+    <h4>ThongKe</h4>
+    <hr />
+    <div class="row">
+    <div class="col-md-4">
+    <form method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ThongKe.IdThongKe" class="control-label"></label>
+                <input asp-for="ThongKe.IdThongKe" class="form-control" />
+                <span asp-validation-for="ThongKe.IdThongKe" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ThongKe.IdAdmin" class="control-label"></label>
+                <select asp-for="ThongKe.IdAdmin" class ="form-control" asp-items="ViewBag.IdAdmin"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ThongKe.SoBuoiGap" class="control-label"></label>
+                <input asp-for="ThongKe.SoBuoiGap" class="form-control" />
+                <span asp-validation-for="ThongKe.SoBuoiGap" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ThongKe.SuDungDiemVi" class="control-label"></label>
+                <input asp-for="ThongKe.SuDungDiemVi" class="form-control" />
+                <span asp-validation-for="ThongKe.SuDungDiemVi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ThongKe.DanhGiaHieuQua" class="control-label"></label>
+                <input asp-for="ThongKe.DanhGiaHieuQua" class="form-control" />
+                <span asp-validation-for="ThongKe.DanhGiaHieuQua" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

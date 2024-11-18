@@ -15,5 +15,7 @@ namespace SWP_Booking.Repositories.Interface
         Boolean DeleteThongBao(int id);
         Boolean DeleteThongBao(ThongBao thongBao);
         Boolean UpdateThongBao(ThongBao thongBao);
+
+        Task<List<ThongBao>> GetThongBaoByIdSinhVien(int idSinhVien);
     }
 }

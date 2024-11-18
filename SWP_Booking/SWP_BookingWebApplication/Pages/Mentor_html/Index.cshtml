@@ -1,0 +1,54 @@
+﻿@page
+@model SWP_BookingWebApplication.Pages.Mentor_html.IndexModel
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Mentor[0].Ten)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mentor[0].Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mentor[0].KiNang)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mentor[0].ChuyenMon)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mentor[0].LichLamViec)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Mentor) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ten)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KiNang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChuyenMon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LichLamViec)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.IdMentor">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.IdMentor">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.IdMentor">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

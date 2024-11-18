@@ -79,6 +79,11 @@ namespace SWP_Booking.Repositories
             return await _dbContext.ThongBaos.Include(t => t.IdSinhVienNavigation).FirstOrDefaultAsync(t => t.IdThongBao == id);
         }
 
+        public async Task<List<ThongBao>> GetThongBaoByIdSinhVien(int idSinhVien)
+        {
+            return await _dbContext.ThongBaos.Where(t => t.IdSinhVien == idSinhVien).ToListAsync();
+        }
+
         public bool UpdateThongBao(ThongBao thongBao)
         {
             try
@@ -91,5 +96,6 @@ namespace SWP_Booking.Repositories
                 throw new NotImplementedException(ex.ToString());
             }
         }
+
     }
 }

@@ -18,7 +18,7 @@ public partial class DanhGia
 
     public DateTime? NgayDanhGia { get; set; }
 
-    public virtual Mentor? IdMentorNavigation { get; set; }
+    public virtual Mentor? EmailMentor { get; set; }
 
-    public virtual SinhVien? IdSinhVienNavigation { get; set; }
+    public virtual SinhVien? EmailSinhVien { get; set; }
 }

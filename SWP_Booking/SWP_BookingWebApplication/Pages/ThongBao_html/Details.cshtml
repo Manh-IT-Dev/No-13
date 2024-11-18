@@ -1,0 +1,37 @@
+﻿@page
+@model SWP_BookingWebApplication.Pages.ThongBao_html.DetailsModel
+
+<div>
+    <h4>ThongBao</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ThongBao.NoiDung)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ThongBao.NoiDung)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ThongBao.NgayGui)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ThongBao.NgayGui)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ThongBao.TrangThai)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ThongBao.TrangThai)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ThongBao.IdSinhVienNavigation)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ThongBao.IdSinhVienNavigation.Email)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.ThongBao.IdThongBao">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

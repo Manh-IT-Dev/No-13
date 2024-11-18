@@ -21,7 +21,7 @@ namespace SWP_Booking.Repositories
         {
             try
             {
-                _dbContext.DanhGias.Add(danhgia);
+                _dbContext.DanhGia.Add(danhgia);
                 return _dbContext.SaveChanges() > 0;
             }
             catch (Exception ex)
@@ -34,10 +34,10 @@ namespace SWP_Booking.Repositories
         {
             try
             {
-                var danhGiaToDelete = _dbContext.DanhGias.Find(id);
+                var danhGiaToDelete = _dbContext.DanhGia.Find(id);
                 if (danhGiaToDelete != null)
                 {
-                    _dbContext.DanhGias.Remove(danhGiaToDelete);
+                    _dbContext.DanhGia.Remove(danhGiaToDelete);
                     return _dbContext.SaveChanges() > 0;
                 }
                 return false;
@@ -52,7 +52,7 @@ namespace SWP_Booking.Repositories
         {
             try
             {
-                _dbContext.DanhGias.Remove(danhGia);
+                _dbContext.DanhGia.Remove(danhGia);
                 return _dbContext.SaveChanges() > 0;
             }
             catch (Exception ex)
@@ -65,9 +65,9 @@ namespace SWP_Booking.Repositories
         {
             try
             {
-                return await _dbContext.DanhGias
-                    .Include(d => d.IdSinhVienNavigation)
-                    .Include(d => d.IdSinhVienNavigation)
+                return await _dbContext.DanhGia
+                    .Include(d => d.EmailSinhVien)
+                    .Include(d => d.EmailSinhVien)
                     .ToListAsync();
             }
             catch (Exception ex)
@@ -78,9 +78,9 @@ namespace SWP_Booking.Repositories
 
         public async Task<DanhGia> GetDanhGiaById(int id)
         {
-            return await _dbContext.DanhGias
-                .Include(d => d.IdSinhVienNavigation)
-                .Include(d => d.IdSinhVienNavigation)
+            return await _dbContext.DanhGia
+                .Include(d => d.EmailSinhVien)
+                .Include(d => d.EmailSinhVien)
                 .FirstOrDefaultAsync(d => d.IdDanhGia == id);
         }
 
