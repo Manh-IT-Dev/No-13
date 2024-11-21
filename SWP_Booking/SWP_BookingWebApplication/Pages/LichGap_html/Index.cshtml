@@ -8,41 +8,42 @@
     <thead>
         <tr>
             <th>
+                @Html.DisplayNameFor(model => model.LichGap[0].EmailMentor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LichGap[0].EmailSinhVien)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.LichGap[0].ThoiGian)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.LichGap[0].TrangThai)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.LichGap[0].IdMentorNavigation)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.LichGap[0].IdSinhVienNavigation)
-            </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.LichGap) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ThoiGian)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TrangThai)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdMentorNavigation.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdSinhVienNavigation.Email)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.IdLichGap">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.IdLichGap">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.IdLichGap">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.LichGap)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmailMentor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmailSinhVien)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ThoiGian)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TrangThai)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.IdLichGap">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.IdLichGap">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.IdLichGap">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

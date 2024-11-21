@@ -16,7 +16,7 @@ public partial class LichGap
 
     public string TrangThai { get; set; } = null!;
 
-    public virtual Mentor? IdMentorNavigation { get; set; }
+    public virtual Mentor? EmailMentor { get; set; }
 
-    public virtual SinhVien? IdSinhVienNavigation { get; set; }
+    public virtual SinhVien? EmailSinhVien { get; set; }
 }

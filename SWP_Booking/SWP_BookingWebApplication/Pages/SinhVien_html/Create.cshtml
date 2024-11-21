@@ -1,12 +1,77 @@
 ﻿@page
 @model SWP_BookingWebApplication.Pages.SinhVien_html.CreateModel
 
-    <h4>SinhVien</h4>
-    <hr />
-    <div class="row">
-    <div class="col-md-4">
-    <form method="post">
-    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<style>
+    body {
+        background-color: #282c34; /* Màu nền tối */
+        color: white; /* Màu chữ trắng */
+        font-family: Arial, sans-serif; /* Font chữ */
+    }
+
+    h4 {
+        text-align: center; /* Căn giữa tiêu đề */
+        margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+    }
+
+    .form-group {
+        margin-bottom: 15px; /* Khoảng cách giữa các nhóm form */
+    }
+
+    .control-label {
+        font-weight: bold; /* Chữ đậm cho nhãn */
+    }
+
+    input.form-control {
+        width: 100%; /* Chiều rộng 100% */
+        padding: 10px; /* Padding cho input */
+        margin: 10px 0; /* Khoảng cách trên và dưới */
+        border: none; /* Không có viền */
+        border-bottom: 2px solid #555; /* Viền dưới */
+        background: transparent; /* Nền trong suốt */
+        color: white; /* Màu chữ trắng */
+        font-size: 16px; /* Kích thước chữ */
+        transition: border-color 0.3s; /* Hiệu ứng chuyển tiếp cho viền */
+    }
+
+        input.form-control:focus {
+            border-bottom: 2px solid #007bff; /* Màu viền khi focus */
+            outline: none; /* Không có outline */
+        }
+
+    .btn-primary {
+        background-color: #007bff; 
+        border: none; 
+        padding: 10px 20px; 
+        font-size: 16px; 
+        cursor: pointer; 
+        transition: background-color 0.3s; 
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3; 
+        }
+
+    .text-danger {
+        color: #dc3545; 
+    }
+
+    a {
+        color: #007bff; 
+        text-decoration: none;
+    }
+
+        a:hover {
+            text-decoration: underline; 
+        }
+</style>
+
+<h4>Sinh Viên Đăng Ký</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="SinhVien.IdSinhVien" class="control-label"></label>
                 <input asp-for="SinhVien.IdSinhVien" class="form-control" />
@@ -19,30 +84,27 @@
             </div>
             <div class="form-group">
                 <label asp-for="SinhVien.Email" class="control-label"></label>
-                <input asp-for="SinhVien.Email" class="form-control" />
+                <input asp-for="SinhVien.Email" class="form-control" type="email" />
                 <span asp-validation-for="SinhVien.Email" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="SinhVien.MatKhau" class="control-label"></label>
-                <input asp-for="SinhVien.MatKhau" class="form-control" />
+                <input asp-for="SinhVien.MatKhau" class="form-control" type="password" />
                 <span asp-validation-for="SinhVien.MatKhau" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="SinhVien.LichSuGap" class="control-label"></label>
-                <input asp-for="SinhVien.LichSuGap" class="form-control" />
-                <span asp-validation-for="SinhVien.LichSuGap" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Đăng Ký" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-page="Index">Back to List</a>
+    <a asp-page="Index">Quay lại danh sách</a>
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

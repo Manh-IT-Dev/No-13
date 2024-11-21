@@ -1,8 +1,68 @@
 ﻿@page
 @model SWP_BookingWebApplication.Pages.Mentor_html.IndexModel
 
+<style>
+    body {
+        background-color: #f4f4f4; /* Màu nền sáng */
+        color: #333; /* Màu chữ tối */
+        font-family: Arial, sans-serif; /* Font chữ */
+    }
+
+    h4 {
+        text-align: center; /* Căn giữa tiêu đề */
+        margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+    }
+
+    .table {
+        width: 100%; /* Chiều rộng 100% */
+        margin: 20px 0; /* Khoảng cách trên và dưới bảng */
+        border-collapse: collapse; /* Gộp viền bảng */
+        background-color: #fff; /* Nền trắng cho bảng */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng cho bảng */
+    }
+
+        .table th, .table td {
+            padding: 12px; /* Padding cho ô */
+            text-align: left; /* Căn trái cho nội dung */
+            border-bottom: 1px solid #ddd; /* Viền dưới cho ô */
+        }
+
+        .table th {
+            background-color: #007bff; /* Màu nền cho tiêu đề bảng */
+            color: white; /* Màu chữ trắng cho tiêu đề */
+        }
+
+        .table tr:hover {
+            background-color: #f1f1f1; /* Màu nền khi hover */
+        }
+
+    .btn-primary {
+        background-color: #007bff; /* Màu nền cho nút */
+        border: none; /* Không có viền */
+        padding: 10px 20px; /* Padding cho nút */
+        color: white; /* Màu chữ trắng */
+        text-decoration: none; /* Không có gạch chân */
+        border-radius: 4px; /* Bo góc cho nút */
+        transition: background-color 0.3s; /* Hiệu ứng chuyển tiếp cho màu nền */
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3; /* Màu nền khi hover */
+        }
+
+    a {
+        color: #007bff; /* Màu chữ cho liên kết */
+        text-decoration: none; /* Không có gạch chân */
+    }
+
+        a:hover {
+            text-decoration: underline; /* Gạch chân khi hover */
+        }
+</style>
+
+<h4>Danh Sách Mentor</h4>
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create" class="btn btn-primary">Tạo Mới</a>
 </p>
 <table class="table">
     <thead>
@@ -26,29 +86,30 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Mentor) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Ten)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.KiNang)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ChuyenMon)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LichLamViec)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.IdMentor">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.IdMentor">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.IdMentor">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.Mentor)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ten)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KiNang)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ChuyenMon)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LichLamViec)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.IdMentor">Sửa</a> |
+                    <a asp-page="./Details" asp-route-id="@item.IdMentor">Chi tiết</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.IdMentor">Xóa</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

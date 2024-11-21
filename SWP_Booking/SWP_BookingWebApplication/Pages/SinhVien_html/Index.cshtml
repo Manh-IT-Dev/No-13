@@ -85,7 +85,7 @@
                 @Html.DisplayFor(modelItem => item.IdSinhVien)
             </td>
             <td>
-                    @Html.DisplayFor(modelItem => item.Ten)
+                @Html.DisplayFor(modelItem => item.Ten)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Email)
@@ -101,8 +101,9 @@
                 <a asp-page="./Edit" asp-route-id="@item.IdSinhVien">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.IdSinhVien">Details</a> |
                 <a asp-page="./Delete" asp-route-id="@item.IdSinhVien">Delete</a> |
-                <a asp-page="../LichGap_html/Create" asp-route-id="@item.IdSinhVien">Đặt Lịch</a> |
+                <a asp-page="../LichGap_html/DatLich" asp-route-id="@item.IdSinhVien">Đặt Lịch</a> |
                 <a asp-page="../ThongBao_html/Index" asp-route-id="@item.IdSinhVien">Xem Thông Báo</a> |
+                <a asp-page="../LichGap_html/Index" asp-route-id="@item.IdSinhVien">Xem lịch gặp</a> |
             </td>
         </tr>
 }

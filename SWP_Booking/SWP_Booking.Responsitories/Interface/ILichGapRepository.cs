@@ -11,7 +11,7 @@ namespace SWP_Booking.Repositories.Interface
     {
         Task<List<LichGap>> GetAllLichGap();
         Task<LichGap> GetLichGapById(int id);
-        Boolean AddLichGap(LichGap lichGap);
+        Task<Boolean> AddLichGap(LichGap lichGap);
         Boolean DeleteLichGap(int id);
         Boolean DeleteLichGap(LichGap lichGap);
         Boolean UpdateLichGap(LichGap lichGap);

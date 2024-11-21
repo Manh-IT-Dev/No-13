@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using SWP_Booking.Repositories.Entities;
+using SWP_Booking.Services;
 using SWP_Booking.Services.Interface;
 
 namespace SWP_BookingWebApplication.Pages.Mentor_html
@@ -19,8 +20,10 @@ namespace SWP_BookingWebApplication.Pages.Mentor_html
             _mentorService = mentorService;
         }
 
-        public IActionResult OnGet()
+        public async Task<IActionResult> OnGetAsync()
         {
+            var mentors = await _mentorService.GetAllMentor();
+            ViewData["Mentor"] = new SelectList(mentors, "IdMentor", "Ten", "Email");
             return Page();
         }
 

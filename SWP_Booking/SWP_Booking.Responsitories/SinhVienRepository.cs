@@ -24,7 +24,7 @@ namespace SWP_Booking.Repositories
             {
                 return await _dbContext.SinhViens
                     .Include(s => s.DanhGia)
-                    .Include(s => s.DiemVis)
+                    //.Include(s => s.DiemVis)
                     .Include(s => s.NhomDuAns)
                     .Include(s => s.LichGaps)
                     .Include(s => s.ThongBaos)
@@ -40,7 +40,7 @@ namespace SWP_Booking.Repositories
         {
             return await _dbContext.SinhViens
                    .Include(s => s.DanhGia)
-                   .Include(s => s.DiemVis)
+                   //.Include(s => s.DiemVis)
                    .Include(s => s.NhomDuAns)
                    .Include(s => s.LichGaps)
                     .Include(s => s.ThongBaos)
@@ -68,7 +68,8 @@ namespace SWP_Booking.Repositories
                 if (sinhVienToDelete != null)
                 {
                     _dbContext.SinhViens.Remove(sinhVienToDelete);
-                    return _dbContext.SaveChanges() > 0;
+                    _dbContext.SaveChanges();
+                    return true;
                 }
                 return false;
             }

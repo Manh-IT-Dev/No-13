@@ -16,9 +16,9 @@ namespace SWP_Booking.Services
         {
             _lichGapRepository = lichGapRepository;
         }
-        public bool AddLichGap(LichGap lichGap)
+        public async Task<bool> AddLichGap(LichGap lichGap)
         {
-            return _lichGapRepository.AddLichGap(lichGap);
+            return await _lichGapRepository.AddLichGap(lichGap);
         }
 
         public bool DeleteLichGap(int id)

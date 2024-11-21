@@ -1,12 +1,78 @@
 ﻿@page
 @model SWP_BookingWebApplication.Pages.Mentor_html.CreateModel
 
-    <h4>Mentor</h4>
-    <hr />
-    <div class="row">
-    <div class="col-md-4">
-    <form method="post">
-    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<style>
+    body {
+        background-color: #f4f4f4;
+        color: #333; 
+        font-family: Arial, sans-serif; 
+    }
+
+    h4 {
+        text-align: center; 
+        margin-bottom: 20px; 
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .control-label {
+        font-weight: bold;
+    }
+
+    input.form-control {
+        width: 100%; 
+        padding: 10px;
+        margin: 10px 0; 
+        border: 1px solid #ccc; 
+        border-radius: 4px; 
+        background: #fff; 
+        color: #333; 
+        font-size: 16px; 
+        transition: border-color 0.3s; 
+    }
+
+        input.form-control:focus {
+            border-color: #007bff; 
+            outline: none; 
+        }
+
+    .btn-primary {
+        background-color: #007bff; 
+        border: none; 
+        padding: 10px 20px; 
+        font-size: 16px; 
+        color: white; 
+        cursor: pointer; 
+        transition: background-color 0.3s; 
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3; 
+        }
+
+    .text-danger {
+        color: #dc3545; 
+    }
+
+    a {
+        color: #007bff; 
+        text-decoration: none; 
+    }
+
+        a:hover {
+            text-decoration: underline; 
+        }
+</style>
+
+<h4>Đăng Ký Mentor</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        <!-- Căn giữa form -->
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Mentor.IdMentor" class="control-label"></label>
                 <input asp-for="Mentor.IdMentor" class="form-control" />
@@ -38,16 +104,18 @@
                 <span asp-validation-for="Mentor.LichLamViec" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Đăng Ký" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-page="Index">Back to List</a>
+    <a asp-page="Index">Quay lại danh sách</a>
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

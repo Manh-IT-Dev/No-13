@@ -6,17 +6,18 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using SWP_Booking.Repositories.Entities;
+using SWP_Booking.Services;
 using SWP_Booking.Services.Interface;
 
-namespace SWP_BookingWebApplication.Pages.LichGap_html
+namespace SWP_BookingWebApplication.Pages.SinhVien_html
 {
-    public class CreateModel : PageModel
+    public class DatLichModel : PageModel
     {
         private readonly ILichGapService _lichGapService;
         private readonly ISinhVienService _sinhVienService;
         private readonly IMentorService _mentorService;
 
-        public CreateModel(ILichGapService lichGapService, ISinhVienService sinhVienService, IMentorService mentorService)
+        public DatLichModel(ILichGapService lichGapService, ISinhVienService sinhVienService, IMentorService mentorService)
         {
             _lichGapService = lichGapService;
             _sinhVienService = sinhVienService;
@@ -27,8 +28,8 @@ namespace SWP_BookingWebApplication.Pages.LichGap_html
         {
             var sinhvien = await _sinhVienService.GetAllSinhVien();
             var mentor = await _mentorService.GetAllMentor();
-            ViewData["IdMentor"] = new SelectList(mentor, "IdMentor", "Email");
             ViewData["IdSinhVien"] = new SelectList(sinhvien, "IdSinhVien", "Email");
+            ViewData["IdMentor"] = new SelectList(mentor, "IdMentor", "Email");
             return Page();
         }
 

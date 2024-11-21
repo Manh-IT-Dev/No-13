@@ -113,11 +113,11 @@ public partial class SwpBookingDbContext : DbContext
                 .IsUnicode(false)
                 .HasDefaultValue("Ðã xác nh?n");
 
-            entity.HasOne(d => d.IdMentorNavigation).WithMany(p => p.LichGaps)
+            entity.HasOne(d => d.EmailMentor).WithMany(p => p.LichGaps)
                 .HasForeignKey(d => d.IdMentor)
                 .HasConstraintName("FK__LichGap__ID_Ment__5070F446");
 
-            entity.HasOne(d => d.IdSinhVienNavigation).WithMany(p => p.LichGaps)
+            entity.HasOne(d => d.EmailSinhVien).WithMany(p => p.LichGaps)
                 .HasForeignKey(d => d.IdSinhVien)
                 .HasConstraintName("FK__LichGap__ID_Sinh__4F7CD00D");
         });

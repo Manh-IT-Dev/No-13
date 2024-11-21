@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SWP_Booking.Repositories")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+44a30f719d26c3b2cc87f112e063134be1bb410c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b2559db5df9ff483297c66e5f379c9fa9105d163")]
 [assembly: System.Reflection.AssemblyProductAttribute("SWP_Booking.Repositories")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SWP_Booking.Repositories")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

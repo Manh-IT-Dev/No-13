@@ -1,52 +1,112 @@
 ﻿@page
 @model SWP_BookingWebApplication.Pages.Mentor_html.EditModel
 
-<h4>Mentor</h4>
+<style>
+    body {
+        background-color: #f4f4f4; /* Màu nền sáng */
+        color: #333; /* Màu chữ tối */
+        font-family: Arial, sans-serif; /* Font chữ */
+    }
+
+    h4 {
+        text-align: center; /* Căn giữa tiêu đề */
+        margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+    }
+
+    .form-group {
+        margin-bottom: 15px; /* Khoảng cách giữa các nhóm form */
+    }
+
+    .control-label {
+        font-weight: bold; /* Chữ đậm cho nhãn */
+    }
+
+    input.form-control {
+        width: 100%; /* Chiều rộng 100% */
+        padding: 10px; /* Padding cho input */
+        margin: 10px 0; /* Khoảng cách trên và dưới */
+        border: 1px solid #ccc; /* Viền xung quanh */
+        border-radius: 4px; /* Bo góc cho input */
+        background: #fff; /* Nền trắng */
+        color: #333; /* Màu chữ tối */
+        font-size: 16px; /* Kích thước chữ */
+        transition: border-color 0.3s; /* Hiệu ứng chuyển tiếp cho viền */
+    }
+
+        input.form-control:focus {
+            border-color: #007bff; /* Màu viền khi focus */
+            outline: none; /* Không có outline */
+        }
+
+    .btn-primary {
+        background-color: #007bff; /* Màu nền cho nút */
+        border: none; /* Không có viền */
+        padding: 10px 20px; /* Padding cho nút */
+        color: white; /* Màu chữ trắng */
+        font-size: 16px; /* Kích thước chữ */
+        cursor: pointer; /* Con trỏ chuột khi hover */
+        transition: background-color 0.3s; /* Hiệu ứng chuyển tiếp cho màu nền */
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3; /* Màu nền khi hover */
+        }
+
+    .text-danger {
+        color: #dc3545; /* Màu chữ đỏ cho thông báo lỗi */
+    }
+
+    a {
+        color: #007bff; /* Màu chữ cho liên kết */
+        text-decoration: none; /* Không có gạch chân */
+    }
+
+        a:hover {
+            text-decoration: underline; /* Gạch chân khi hover */
+        }
+</style>
+
+<h4>Chỉnh Sửa Mentor</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4 offset-md-4"> <!-- Căn giữa form -->
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Mentor.IdMentor" />
             <div class="form-group">
-                
                 <label asp-for="Mentor.Ten" class="control-label"></label>
                 <input asp-for="Mentor.Ten" class="form-control" />
                 <span asp-validation-for="Mentor.Ten" class="text-danger"></span>
             </div>
             <div class="form-group">
-                
                 <label asp-for="Mentor.Email" class="control-label"></label>
                 <input asp-for="Mentor.Email" class="form-control" />
                 <span asp-validation-for="Mentor.Email" class="text-danger"></span>
             </div>
             <div class="form-group">
-                
                 <label asp-for="Mentor.KiNang" class="control-label"></label>
                 <input asp-for="Mentor.KiNang" class="form-control" />
                 <span asp-validation-for="Mentor.KiNang" class="text-danger"></span>
             </div>
             <div class="form-group">
-                
                 <label asp-for="Mentor.ChuyenMon" class="control-label"></label>
                 <input asp-for="Mentor.ChuyenMon" class="form-control" />
                 <span asp-validation-for="Mentor.ChuyenMon" class="text-danger"></span>
             </div>
             <div class="form-group">
-                
                 <label asp-for="Mentor.LichLamViec" class="control-label"></label>
                 <input asp-for="Mentor.LichLamViec" class="form-control" />
                 <span asp-validation-for="Mentor.LichLamViec" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Lưu" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="./Index">Quay lại danh sách</a>
 </div>
 
 @section Scripts {

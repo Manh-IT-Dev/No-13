@@ -17,12 +17,12 @@ namespace SWP_Booking.Repositories
             _dbContext = dbContext;
         }
 
-        public bool AddLichGap(LichGap lichGap)
+        public async Task<bool> AddLichGap(LichGap lichGap)
         {
             try
             {
-                _dbContext.LichGaps.Add(lichGap);
-                return _dbContext.SaveChanges() > 0;
+                await _dbContext.LichGaps.AddAsync(lichGap);
+                return await _dbContext.SaveChangesAsync() > 0;
             }
             catch (Exception ex)
             {
@@ -66,8 +66,8 @@ namespace SWP_Booking.Repositories
             try
             {
                 return await _dbContext.LichGaps
-                    .Include(l => l.IdSinhVienNavigation)
-                    .Include(l => l.IdMentorNavigation)
+                    .Include(l => l.EmailSinhVien)
+                    .Include(l => l.EmailMentor)
                     .ToListAsync();
             }
             catch (Exception ex)
@@ -79,8 +79,8 @@ namespace SWP_Booking.Repositories
         public async Task<LichGap> GetLichGapById(int id)
         {
             return await _dbContext.LichGaps
-                 .Include(l => l.IdSinhVienNavigation)
-                 .Include(l => l.IdMentorNavigation)
+                 .Include(l => l.EmailSinhVien)
+                 .Include(l => l.EmailMentor)
                  .FirstOrDefaultAsync(l => l.IdLichGap == id);
         }
 
